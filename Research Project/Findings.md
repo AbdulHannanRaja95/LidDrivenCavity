@@ -13,5 +13,7 @@ linear. Now, the main problem with the numerical solution of these equations is 
 term**. Different methods/schemes had been proposed in the past to deal with this problem. Generally it is perferable to solve the
 equations in primitive variables(u,v,p). 
 
-**Stream Function vorticity** is among one of the many approaches to deal with this problem. SIMPLE Algorithm is also used. The approach
-used in the code is **ARTIFICIAL COMPRESSIBILITY METHOD** 
+**Stream Function vorticity** is among one of the many approaches to deal with this problem. SIMPLE Algorithm is also used. The
+approach/method used in the code is **ARTIFICIAL COMPRESSIBILITY METHOD**. This method incorporates the use of artificial compressibility
+term in the continiuity equation. 
+
