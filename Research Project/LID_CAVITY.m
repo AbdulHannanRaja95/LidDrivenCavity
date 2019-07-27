@@ -23,7 +23,7 @@ t = 1; % initial iteration number
 
 %%Boundary Conditions Specification/preallocation
 u(1:nx,1:ny) = 0;  % initially u = 0 over the entire domain
-u(1:nx,ny)   = 1;  % initially u = 1 over the right boundary
+u(1:nx,ny)   = 1;  % initially u = 1 over the right boundary...although it is false...
 v(1:nx,1:ny) = 0;  % initially v = 0 over the entire domain
 
 p(1:nx,1:ny) = 0.5; % initially pressure = 0.5 over the entire domain
