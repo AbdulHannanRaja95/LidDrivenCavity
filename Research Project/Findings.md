@@ -19,3 +19,15 @@ only applicable for 2D problems because stream function is only defined for 2D. 
 because in case of steady fluid, the artifical compressibility term eqauls to zero and in this way the continuity equation remains
 satisfied.
 
+# Code Algortihm
+
+The code starts with the definition of domain,number of computational points/nodes, spacing , coordinates along with the Boundary
+Conditions(BC) and some constants which are used in NS equations.
+
+The code then solve the continuity equation for pressure calculation and then uses that pressure to compute the velocity component(u,v) by
+solving the discretized Partial Differential Equation (Navier Stokes Eqaution) for x and y momentum.
+
+The code then computes the error for every iteration and checks it against the error condition.
+
+Finally the code computes the vorticity by using fundamental vorticity equation.
+
