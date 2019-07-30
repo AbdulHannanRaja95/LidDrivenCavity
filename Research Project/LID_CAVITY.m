@@ -19,12 +19,12 @@ for i=1:nx
     end
 end
 dt = 0.001; %time step
-t = 1; % iteration number
+t = 1; % iteration number/timestep for each iteration
 
 %%Boundary Conditions Specification/preallocation
 u(1:nx,1:ny) = 0;  % initially u = 0 over the entire domain
-u(1:nx,ny)   = 1;  % initially u = 1 over the right boundary(although the according to the problem statement,it is false..this 
-% does not make any sense..) it should be u(nx,1:ny) = 1 which indicates the lid is being moved with velocity in x-direction..
+u(1:nx,ny)   = 1;  % initially u = 1 over the right boundary(although the according to the problem statement,
+%it should be u(nx,1:ny) = 1 which indicates the lid is being moved at the top with velocity in x-direction..
 v(1:nx,1:ny) = 0;  % initially v = 0 over the entire domain
 
 p(1:nx,1:ny) = 0.5; % initially pressure = 0.5 over the entire domain
@@ -53,7 +53,7 @@ while(((er >= 1e-5) && (t <= 10000)))%error condition is always true....time con
             %p is the pressure at next time step(n+1) while p1 is at previous time step(n) 
         end
     end
-    %not sure about this part...it actually equals pressure for all 4 boundary nodes to the penultimate nodes...i think just to make dp/dy=0  
+    %not sure about this part...it actually equals pressure for all 4 boundary nodes to the penultimate nodes...just to make dp/dy=0  
     p(1,:) = p(2,:);
     p(nx,:) = p(nx-1,:);
     p(:,1) = p(:,2);
@@ -100,7 +100,8 @@ toc % timer stops for the computation
 
 for i=1:nx-1 %to cater for forward difference scheme
     for j=1:ny-1 %to cater for forward difference scheme
-        vor(i,j) = 1/dy*(u(i,j+1)-u(i,j)) - 1/dx*(v(i+1,j)-v(i,j));%loop starts from 1 , center diff is not used, forward difference is used
+        vor(i,j) = 1/dy*(u(i,j+1)-u(i,j)) - 1/dx*(v(i+1,j)-v(i,j));%loop starts from 1 , center diff is not used, 
+        %forward difference is used
     end
 end
 vor(nx,:) = vor(nx-1,:);
