@@ -2,7 +2,7 @@ About the velocity boundary condition. In the code, the right boundary of the do
 Shouldn't this be the top boundary.
 
 Why do we need to put pressure of the boundary and the penultimate boundary nodes equal to each other?Although i have added some comment
-in the LID_DRIVEN_CAVITY_VERSION1.m file [a link](https://github.com/AbdulHannanRaja95/LidDrivenCavity/blob/LID_CAVITY_VERSION1.m/Research%20Project/LID_CAVITY.m)
+in the LID_DRIVEN_CAVITY_VERSION1.m file [a lin(https://github.com/AbdulHannanRaja95/LidDrivenCavity/blob/LID_CAVITY_VERSION1.m/Research%20Project/LID_CAVITY.m)
 
 Why center difference scheme is not used for the vorticity computation?
 
