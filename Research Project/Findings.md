@@ -31,3 +31,5 @@ The code then calculates the error for every iteration and checks it against the
 
 Finally the code computes the vorticity by using fundamental vorticity equation using Forward difference scheme.
 
+M-file conatining detail commenting of each and every line of code has already been uploaded.
+Link is provided:[a link](https://github.com/AbdulHannanRaja95/LidDrivenCavity/blob/LID_CAVITY_VERSION1.m/Research%20Project/LID_CAVITY.m)
