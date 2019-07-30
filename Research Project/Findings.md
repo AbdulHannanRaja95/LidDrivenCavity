@@ -1,7 +1,8 @@
 # Findings
 
-The code solves 2D incompressible Navier Stokes Equations for Lid Driven Cavity Flow. The Navier Stokes Equation are fundamental Partifal
-Differential equation.The discretization Schemes are used to convert these partial differential eqautions into the solvable algebraic equations.
+The code solves 2D incompressible non dimensional form of Navier Stokes Equations for Lid Driven Cavity Flow. The Navier Stokes Equation
+are fundamental Partial Differential equation.The discretization Schemes are used to convert these partial differential eqautions into the
+solvable algebraic equations.
 
 # Numerical Solution of Navier Stokes Equation 
 
@@ -28,5 +29,5 @@ by solving the discretized Partial Differential Equation (Navier Stokes Eqaution
 
 The code then calculates the error for every iteration and checks it against the error condition.
 
-Finally the code computes the vorticity by using fundamental vorticity equation.
+Finally the code computes the vorticity by using fundamental vorticity equation using Forward difference scheme.
 
