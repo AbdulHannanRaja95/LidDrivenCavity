@@ -53,7 +53,8 @@ while(((er >= 1e-5) && (t <= 10000)))%error condition is always true....time con
             %p is the pressure at next time step(n+1) while p1 is at previous time step(n) 
         end
     end
-    %not sure about this part...it actually equals pressure for all 4 boundary nodes to the penultimate nodes...just to make dp/dy=0  
+    %.it actually equals pressure for all 4 boundary nodes to the penultimate nodes...just to make dp/dy=0 and dp/dx=0
+    %to counter check the velocity BC..
     p(1,:) = p(2,:);
     p(nx,:) = p(nx-1,:);
     p(:,1) = p(:,2);
